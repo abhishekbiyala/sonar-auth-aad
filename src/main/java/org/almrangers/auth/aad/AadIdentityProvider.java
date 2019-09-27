@@ -180,7 +180,8 @@ public class AadIdentityProvider implements OAuth2IdentityProvider {
 	  String url =  String.format(settings.getGraphMembershipUrl(), settings.tenantId(), userId);
 	  // Append odata query parameters for subsequent pages
 	if (null != nextPage) {
-		url += "&" + nextPage;
+		// url += "&" + nextPage;
+		url = nextPage
 	}
 	return new URL(url);
   }
